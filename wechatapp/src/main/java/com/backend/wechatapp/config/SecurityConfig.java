@@ -1,6 +1,6 @@
 package com.backend.wechatapp.config;
 
-import com.oj.onlinejudge.config.filter.JwtAuthenticationTokenFilter;
+import com.backend.wechatapp.config.filter.JwtAuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+        return authenticationManager();
     }
 
     @Override
@@ -43,19 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(
-                        "/user/account/token/",
-                        "/user/account/register/",
-                        "/index/info/",
-                        "/problems/show/",
-                        "/user/submission/offersub/",
-                        "/user/submission/pollret/",
-                        "/problems/overview/",
-                        "/chatting/start/",
-                        "/problem/details/randomsolution/",
-                        "/problems/brandnewproblem/",
-                        "/user/ranking/"
-                ).permitAll()
+                .antMatchers().permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);

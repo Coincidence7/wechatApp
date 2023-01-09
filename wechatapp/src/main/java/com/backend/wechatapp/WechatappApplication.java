@@ -1,5 +1,6 @@
 package com.backend.wechatapp;
 
+import dev.tcp.server.SocketTest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WechatappApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(WechatappApplication.class, args);
+        SocketTest.run();
     }
 
 }
