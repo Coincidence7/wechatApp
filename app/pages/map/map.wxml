@@ -1,0 +1,14 @@
+<!-- map.wxml -->
+<custom>
+	<view>
+		<map class="myMap"
+			longitude="116.33" 
+			latitude="39.93" 
+			scale='10'
+			markers="{{markers}}"
+			bindmarkertap="markertap"
+			>
+		</map>
+
+	</view>
+</custom>

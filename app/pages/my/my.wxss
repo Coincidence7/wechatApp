@@ -1,0 +1,34 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.self-page-top{
+
+}
+.userAvatar{
+	width: 128rpx;
+	height: 128rpx;
+	margin: 65rpx;
+	display:block;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.username{
+	display:flex;
+	flex-direction: column;
+	margin-left: 30rpx;
+	margin-top: 100rpx;
+	font-size: 11pt;
+	float: left;
+}
+.userDetail{
+	float: right;
+	margin-top: 105rpx;
+	margin-bottom: 105rpx;
+	margin-left: 65rpx;
+	margin-right: 65rpx;
+}

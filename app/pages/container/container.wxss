@@ -1,0 +1,15 @@
+/* page{
+	height: 300%;
+} */
+
+.entity{
+	background-color: #f1fafa88;
+	border: solid #f1ebff;
+	border-radius: 20rpx;
+	margin-left: 8rpx;
+	margin-right: 8rpx;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* justify-content: space-between; */
+}

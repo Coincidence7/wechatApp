@@ -1,0 +1,20 @@
+<view>
+	<view>
+		<map class="myMap"
+			longitude="116.33" 
+			latitude="39.93" 
+			scale='10'></map>
+	</view>
+	<view>
+		<text>
+			这是你的任务
+			坐标
+			状态
+			所属机构
+			任务内容
+			批注
+		</text>
+		
+	</view>
+		
+</view>

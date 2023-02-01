@@ -1,5 +1,6 @@
-/uni-app/manifest.json
-/uni-app/package.json
+/app/package.json
+/app/project.config.json
+/app/project.private.config.json
 /wechatapp/src/main/resources/application.properties
-/uni-app/uni_modules/
-/uni-app/unpackage/
+/app/miniprogram_npm/
+/app/node_modules/

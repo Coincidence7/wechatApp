@@ -1,0 +1,5 @@
+<view class="entity" style="--background_text_color--:{{background_text_color}}">
+	{{innerText}}
+
+	<slot></slot>
+</view>
