@@ -3,5 +3,12 @@ page{
 }
 
 .myMap{
+	height: 100%;
+	width: 100%;
+}
+
+.map_cover{
+	background-color: black;
 	height: 10%;
+	vertical-align: buttom;
 }

@@ -1,5 +1,4 @@
-<view class="entity" style="--background_text_color--:{{background_text_color}}">
-	{{innerText}}
-
+<view class="entity" style="text-align: center;">
+	<span>{{innerText}}</span>
 	<slot></slot>
 </view>

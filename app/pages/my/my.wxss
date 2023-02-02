@@ -1,3 +1,6 @@
+page{
+	height: 100%;
+}
 .log-list {
   display: flex;
   flex-direction: column;

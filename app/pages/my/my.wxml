@@ -1,31 +1,29 @@
 <!--logs.wxml-->
-<custom>
-	<view class="self-page-top" style="text-align: center">
-		<van-row>
-		  <van-col span="6">
-			<open-data type="userAvatarUrl" class="userAvatar"></open-data>
-		  </van-col>
-		  <van-col span="12">
-			<open-data type="userNickName" class="username"></open-data>		  
-		  </van-col>
-		 <van-col span="6">
-			 <van-icon name="arrow" class="userDetail"/>
-		  </van-col>
-		</van-row>
-		<van-grid>
-		  <van-grid-item icon="label-o" text="绩效" />
-		  <van-grid-item icon="warning-o" text="异常信息" />
-		  <van-grid-item icon="chat-o" text="消息" />
-		  <van-grid-item icon="bullhorn-o" badge="{{9}}" text="通知" />
-		</van-grid>
-
-	</view>
-	<view style="align-items: center; display: flex; flex-direction: column;" >
-		<block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-		  <text class="log-item">{{index + 1}}. {{log.date}}</text>
-		</block>
-	</view>
+	<custom innerHeight="100%">
+		<view class="self-page-top" style="text-align: center">
+			<van-row bindtap="bindViewTapMyPage">
+			  <van-col span="6">
+				  <view>
+					  <open-data type="userAvatarUrl" class="userAvatar"></open-data>
+				  </view>
+			  </van-col>
+			  <van-col span="12">
+				<open-data type="userNickName" class="username"></open-data>		  
+			  </van-col>
+			 <van-col span="6">
+				 <van-icon name="arrow" class="userDetail"/>
+			  </van-col>
+			</van-row>
+			<van-grid>
+			  <van-grid-item icon="label-o" text="绩效" />
+			  <van-grid-item icon="warning-o" text="异常信息" />
+			  <van-grid-item icon="chat-o" text="消息" />
+			  <van-grid-item icon="bullhorn-o" badge="{{9}}" text="通知" />
+			</van-grid>
 	
- 
-  
-</custom>
+		</view>
+		
+		<custom innerText="功能未开放,敬请期待" style="height: 60rpx; line-height: 60rpx;">
+		</custom>
+	  
+	</custom>

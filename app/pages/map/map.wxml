@@ -1,6 +1,7 @@
 <!-- map.wxml -->
-<custom>
-	<view>
+<custom >
+	<view style="height: 100%">
+		
 		<map class="myMap"
 			longitude="116.33" 
 			latitude="39.93" 
@@ -8,7 +9,10 @@
 			markers="{{markers}}"
 			bindmarkertap="markertap"
 			>
+			<cover-view class="map_cover">
+				
+			</cover-view>
 		</map>
-
+		
 	</view>
 </custom>

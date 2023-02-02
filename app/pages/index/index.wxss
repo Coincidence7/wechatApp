@@ -1,5 +1,11 @@
 /**index.wxss**/
+page{
+	height: 100%;
+}
 
+.container{
+	height: 100%;
+}
 .userinfo {
   display: flex;
   flex-direction: column;

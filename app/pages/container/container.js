@@ -4,6 +4,10 @@ Component({
 		innerText:{
 			type: String,
 			value: ''
+		},
+		innerHeight:{
+			type: String,
+			value: "100rpx"
 		}
 	},
 	data:{
