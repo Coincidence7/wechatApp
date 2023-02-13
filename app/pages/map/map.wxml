@@ -1,18 +1,49 @@
 <!-- map.wxml -->
-<custom >
-	<view style="height: 100%">
+
+<custom>
+
+	<view style="height: 99%">
 		
+		<page-container show="{{more}}" overlay="{{true}}" close-on-slideDown="{{true}}"
+			bind:beforeenter="beforeenter" 
+			bind:enter="enter" 
+			bind:afterenter="afterenter" 
+			bind:beforeleave="beforeleave" 
+			bind:leave="leave" 
+			bind:afterleave="afterleave" 
+			bind:clickoverlay="clickoverlay">
+			<view>
+				<van-card
+				  num="2"
+				  price="2.00"
+				  desc="描述信息"
+				  title="商品标题"
+				  thumb="{{ imageURL }}"
+				/>
+				<van-card
+				  num="2"
+				  price="2.00"
+				  desc="描述信息"
+				  title="商品标题"
+				  thumb="{{ imageURL }}"
+				/>
+			</view>
+		</page-container>
 		<map class="myMap"
-			longitude="116.33" 
-			latitude="39.93" 
-			scale='10'
-			markers="{{markers}}"
-			bindmarkertap="markertap"
-			>
-			<cover-view class="map_cover">
-				
-			</cover-view>
+		  	longitude="116.33" 
+		  	latitude="39.93" 
+		  	scale='10'
+		  	markers="{{markers}}"
+		  	bindmarkertap="markertap"
+		  	>
+			<van-icon  bindtap="getMore" class="more" name="wap-nav" size="70rpx"/>
+			<van-icon  bindtap="redirectLocation" class="location" name="location-o" size="70rpx"/>
+			<!-- <van-icon class="more" name="more-o" size="100rpx"/> -->
+			<!-- <movable-area class="area">
+				<movable-view bindtouchstart="startDrawer" direction="vertical" scale-value="3" style="width: 100%; height: 100%; background-color: green">
+					------
+				</movable-view>
+			</movable-area> -->
 		</map>
-		
 	</view>
 </custom>
