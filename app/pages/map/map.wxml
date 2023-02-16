@@ -1,9 +1,7 @@
 <!-- map.wxml -->
 
 <custom>
-
 	<view style="height: 99%">
-		
 		<page-container show="{{more}}" overlay="{{true}}" close-on-slideDown="{{true}}"
 			bind:beforeenter="beforeenter" 
 			bind:enter="enter" 
@@ -11,31 +9,55 @@
 			bind:beforeleave="beforeleave" 
 			bind:leave="leave" 
 			bind:afterleave="afterleave" 
-			bind:clickoverlay="clickoverlay">
-			<view>
-				<van-card
-				  num="2"
-				  price="2.00"
-				  desc="描述信息"
-				  title="商品标题"
-				  thumb="{{ imageURL }}"
-				/>
-				<van-card
-				  num="2"
-				  price="2.00"
-				  desc="描述信息"
-				  title="商品标题"
-				  thumb="{{ imageURL }}"
-				/>
-			</view>
+			bind:clickoverlay="clickoverlay"
+			custom-style="height: 80%">
+			<custom>
+				<view class="title">站点信息</view>
+				<view class="searchBar">
+					<van-search 
+						value="{{ searchValue }}" 
+						placeholder="输入关键词以检索相应站点"
+						show-action
+						bind:search="onSearch"
+						bind:cancel="onCancel"
+					/>
+				</view>
+				<view class="content">
+					<van-swipe-cell right-width="{{ 65 }}">
+					    <van-card
+					      num="2"
+					      price="2.00"
+					      desc="描述信息"
+					      title="商品标题"
+					      thumb="../../../../static/dtu_sample_pic.jpg"
+						  style="height: 100%"
+						  bindtap="toDetail"
+					    />
+						<button style="height: 100%; display: flex; justify-content: center; align-items: center;" type="primary" slot="right">
+							<span>反馈</span>
+						</button>
+					</van-swipe-cell>
+					<van-popup
+					  show="{{ showDetail }}"
+					  position="bottom"
+					  custom-style="height: 70%;"
+					  bind:close="closeDetail"
+					>
+						这是一个测试弹出层
+					</van-popup>
+				</view>
+			</custom>
 		</page-container>
 		<map class="myMap"
-		  	longitude="116.33" 
-		  	latitude="39.93" 
-		  	scale='10'
-		  	markers="{{markers}}"
-		  	bindmarkertap="markertap"
+				longitude="116.33" 
+				latitude="39.93" 
+				scale='10'
+				markers="{{markers}}"
+				bindmarkertap="markertap"
 		  	>
+			<cover-view slot="callout">
+			    <cover-view  class="customCallout" marker-id="1"></cover-view>
+			</cover-view>
 			<van-icon  bindtap="getMore" class="more" name="wap-nav" size="70rpx"/>
 			<van-icon  bindtap="redirectLocation" class="location" name="location-o" size="70rpx"/>
 			<!-- <van-icon class="more" name="more-o" size="100rpx"/> -->

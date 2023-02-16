@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-	<custom >
+	<custom style="text-align: center;">
 		<view>
 			<view class="userinfo">
 				<block wx:if="{{canIUseOpenData}}">

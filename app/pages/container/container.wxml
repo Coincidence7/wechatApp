@@ -1,5 +1,4 @@
-<view class="entity" style="text-align: center;">
+<view class="entity">  <!-- 在必要的情况下需要使用 style="text-align: center;" -->
 	<span>{{innerText}}</span>
 	<slot></slot>
-	
 </view>

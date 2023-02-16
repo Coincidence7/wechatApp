@@ -5,18 +5,39 @@ var qqmapsdk;
 Page({
 	data:{
 		markers: [{
-			longitude:116.33,
-			latitude:39.93,
 			id: 1,
-			width: 34,
-			height: 49
+			longitude: "116.33",
+			latitude: "39.93",
+			iconPath: '/../static/location.png',
+			width: 50,
+			height: 50,
+			callout: {
+				content: '文本内容',
+				color: '#ff0000',
+				fontSize: 14,
+				borderWidth: 2,
+				borderRadius: 10,
+				borderColor: '#000000',
+				bgColor: '#ffffff',
+				padding: 5,
+				display: "ALWAYS",
+				textAlign: 'center'
+			},
 		}],
 		width: 0,
 		height: 0,
 		more: false,
 		activeKey: 0,
+		searchValue: "",
+		showDetail: false,
+		env: ""
 		
-	},
+    },
+    onReady: function (e) {
+        this.mapCtx = wx.createMapContext('myMap')
+		
+		
+    },
 	beforeenter: function(){
 		console.log("beforeenter")
 	},
@@ -42,13 +63,17 @@ Page({
 		console.log("clickoverlay")
 	},
 	getMore: function(){
-		console.log("yes")
 		this.setData({
 			more: true
 		})
 	},
+	onSearch: function(){
+		console.log("查询")
+	},
+	onCancel: function(){
+		console.log("取消")
+	},
 	onLoad: function(options){
-		console.log("进入map")
 		qqmapsdk = new QQMapWX({
 			key: 'IO7BZ-WRKL3-27633-3SRVO-VOKZE-I7F6G'
 		})
@@ -56,7 +81,22 @@ Page({
 			width: getApp().globalData.windowWidth,
 			height: getApp().globalData.windowHeight
 		})
-		//console.log(this.data)
+		this.setData({
+			env: wx.getAccountInfoSync().miniProgram.envVersion
+		})
+		
+		// if(this.data.env != 'develop'){
+		// 	for (var i = 0; i < this.data.markers.length; i++) {
+		// 		let s = 'markers[' + i + '].callout.display'
+		
+		// 		this.data.markers[i].callout.display = "BYCLICK"
+		// 		// this.setData({
+		// 		// 	["this.data.markers[" + i + "]"] : "BYCLICK"
+		// 		// })
+				
+		// 	}
+		// }
+		// console.log(this.data)
 	},
 	markertap: function(e){
 		console.log(e)
@@ -98,5 +138,15 @@ Page({
 		// 		console.log(fail)
 		// 	}
 		// })
+	},
+	toDetail: function(){
+		this.setData({
+			showDetail: true
+		})
+	},
+	closeDetail: function(){
+		this.setData({
+			showDetail: false
+		})
 	}
 })
