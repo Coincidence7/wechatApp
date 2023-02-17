@@ -11,7 +11,7 @@
 			bind:afterleave="afterleave" 
 			bind:clickoverlay="clickoverlay"
 			custom-style="height: 80%">
-			<custom>
+			<custom style="text-align: center;">
 				<view class="title">站点信息</view>
 				<view class="searchBar">
 					<van-search 
@@ -56,7 +56,7 @@
 				bindmarkertap="markertap"
 		  	>
 			<cover-view slot="callout">
-			    <cover-view  class="customCallout" marker-id="1"></cover-view>
+			    <cover-view class="customCallout" marker-id="1"></cover-view>
 			</cover-view>
 			<van-icon  bindtap="getMore" class="more" name="wap-nav" size="70rpx"/>
 			<van-icon  bindtap="redirectLocation" class="location" name="location-o" size="70rpx"/>

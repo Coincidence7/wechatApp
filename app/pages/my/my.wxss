@@ -10,22 +10,37 @@ page{
   margin: 10rpx;
 }
 .self-page-top{
-
+	height: 50%;
 }
-.userAvatar{
+
+.avatar-wrapper{
+	width: 256rpx;
+	height: 256rpx;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff00;
+	border-radius: 50%;
+}
+.image-wrapper{
 	width: 128rpx;
 	height: 128rpx;
-	margin: 65rpx;
-	display:block;
+	margin: auto;
+	display: block;
 	overflow: hidden;
 	border-radius: 50%;
 }
-.username{
+.avatar{
+	width: 128rpx;
+	height: 128rpx;
+	margin: auto;
+}
+.weui-input{
 	display:flex;
 	flex-direction: column;
-	margin-left: 30rpx;
+	margin-left: 10rpx;
 	margin-top: 100rpx;
-	font-size: 11pt;
+	font-size: 15pt;
 	float: left;
 }
 .userDetail{

@@ -6,13 +6,13 @@ Page({
 	data:{
 		markers: [{
 			id: 1,
-			longitude: "116.33",
-			latitude: "39.93",
+			longitude: "116.40",
+			latitude: "39.91",
 			iconPath: '/../static/location.png',
 			width: 50,
 			height: 50,
 			callout: {
-				content: '文本内容',
+				content: '站点详情',
 				color: '#ff0000',
 				fontSize: 14,
 				borderWidth: 2,

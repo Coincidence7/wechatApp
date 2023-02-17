@@ -3,12 +3,14 @@
 	<view class="self-page-top" style="text-align: center">
 		<van-row bindtap="bindViewTapMyPage">
 		  <van-col span="6">
-			  <view>
-				  <open-data type="userAvatarUrl" class="userAvatar"></open-data>
-			  </view>
+				<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+					<view class="image-wrapper">
+						<image class="avatar" src="{{ avatarUrl }}"></image>
+					</view>
+				</button>		  
 		  </van-col>
 		  <van-col span="12">
-			<open-data type="userNickName" class="username"></open-data>		  
+			<input type="nickname" class="weui-input" placeholder="请输入昵称"/>		  
 		  </van-col>
 		 <van-col span="6">
 			 <van-icon name="arrow" class="userDetail"/>
@@ -23,7 +25,7 @@
 
 	</view>
 	
-	<custom innerText="功能未开放,敬请期待" style="height: 60rpx; line-height: 60rpx;">
+	<custom innerText="功能未开放,敬请期待" style="text-align: center; height: 60rpx; line-height: 60rpx;">
 	</custom>
   
 </custom>
