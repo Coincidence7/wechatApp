@@ -1,0 +1,48 @@
+.entity{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: white;
+	/* overflow: hidden; */
+	border-radius: 5%;
+}
+.inner{
+	/**
+	 * @author Luo'Xing'yue
+	 * @createTime 2023-02-18
+	 * 这个样式放在 .entity 中会导致右边框消失,怀疑和 map.wxss 中的样式有关
+	*/
+	height: 100%;
+	width: 100%;
+	border: 5rpx solid #cbcbcc99;
+	border-radius: 5%;
+}
+.data_left{
+	width: 160rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+}
+.data_right{
+	width: 320rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+}
+.stationImage{
+	width: 160rpx;
+}
+.dataImage{
+	width: 320rpx;
+	height: 160rpx;
+	margin-left: 80rpx;
+}
+
+.Description{
+	font-size: 32rpx;
+	margin-bottom: 20rpx;
+	width: 100%;
+	text-align: center;
+}

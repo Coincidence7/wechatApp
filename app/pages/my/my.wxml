@@ -10,7 +10,7 @@
 				</button>		  
 		  </van-col>
 		  <van-col span="12">
-			<input type="nickname" class="weui-input" placeholder="请输入昵称"/>		  
+			<input type="nickname" class="weui-input" placeholder="请输入昵称" value="{{ nickname }}" bindchange="onChooseNickname"/>		  
 		  </van-col>
 		 <van-col span="6">
 			 <van-icon name="arrow" class="userDetail"/>

@@ -11,17 +11,8 @@ Page({
 			iconPath: '/../static/location.png',
 			width: 50,
 			height: 50,
-			callout: {
-				content: '站点详情',
-				color: '#ff0000',
-				fontSize: 14,
-				borderWidth: 2,
-				borderRadius: 10,
-				borderColor: '#000000',
-				bgColor: '#ffffff',
-				padding: 5,
+			customCallout: {
 				display: "ALWAYS",
-				textAlign: 'center'
 			},
 		}],
 		width: 0,

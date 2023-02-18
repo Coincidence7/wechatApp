@@ -1,4 +1,3 @@
-
 Component({
 	properties:{
 		// 内部属性
