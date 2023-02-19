@@ -1,20 +1,19 @@
-<view class="entity">  <!-- 在必要的情况下需要使用 style="text-align: center;" -->
+<view class="entity1">  <!-- 在必要的情况下需要使用 style="text-align: center;" -->
 <!-- 	<span>{{ imageUrl }}</span> -->
-	<van-row class="inner">
-		<van-col span="8" class="col-1">
-			<view class="data_left">
-				<image class="stationImage" mode="widthFix" bindload="loadImage" src="{{ imageUrl }}"></image>
-				<view class="Description"><span class="inline">{{ imageDescription }}</span></view>	
-			</view>
-		</van-col>
-		<van-col span="16" class="col-2">
-			<view class="data_right">
-				<image wx:if="{{ !defaultData }}" class="dataImage" mode="heightFix" src="/../static/default_data.png"></image>
+	<view class="inner">
+		<view class="data_left">
+			<image class="stationImage" mode="widthFix" bindload="loadImage" src="{{ imageUrl }}"></image>
+			<view class="Description"><span class="inline">{{ imageDescription }}</span></view>	
+		</view>
+		<view class="data_right">
+			<view class="default_right" wx:if="{{ !defaultData }}">
+				<image class="dataImage" mode="widthFix" src="/../static/default_data.png"></image>
 				<view class="Description"><span class="inline">暂无数据</span></view>
 			</view>
-			
-			<slot></slot>
-		</van-col>  
-	</van-row>
+			<view class="custom_right" wx:else>
+				<slot></slot>
+			</view>
+		</view>
+	</view>
 	
 </view>
