@@ -1,11 +1,35 @@
-<view>
-	<view>
+<custom>
+	<view style="height: 99%">
 		<map class="myMap"
 			longitude="116.33" 
 			latitude="39.93" 
-			scale='10'></map>
-	</view>
-	<view>
+			scale='10'
+			markers="{{markers}}"
+			bindmarkertap="markertap"
+			bindcallouttap="calloutTap"
+		>
+		<cover-view slot="callout" class="callout_wrapper">
+		    <cover-view class="customCallout" marker-id="1">
+				<state-card defaultData="{{ true }}">
+					<view style="display: flex; flex-direction: column;">
+						<span style="padding: 15rpx">
+							容量状态: <van-tag plain type="primary">100%</van-tag>
+						</span>
+						<span style="padding: 15rpx">
+							所属机构: <van-tag plain type="primary">xx机构</van-tag>
+						</span>
+						<span style="padding: 15rpx">
+							处理状态: <van-tag plain type="primary">无人处理</van-tag>
+						</span>
+					</view>
+					
+				</state-card>
+			</cover-view>
+		</cover-view>
+		</map>
+		<view> 
+			
+		</view>
 		<text>
 			这是你的任务
 			坐标
@@ -14,7 +38,5 @@
 			任务内容
 			批注
 		</text>
-		
-	</view>
-		
-</view>
+	</view>		
+</custom>

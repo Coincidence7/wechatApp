@@ -1,5 +1,4 @@
 <!-- map.wxml -->
-
 <custom>
 	<view style="height: 99%">
 		<page-container show="{{more}}" overlay="{{true}}" close-on-slideDown="{{true}}"
@@ -54,6 +53,7 @@
 				scale='10'
 				markers="{{markers}}"
 				bindmarkertap="markertap"
+				bindcallouttap="calloutTap"
 		  	>
 			<cover-view slot="callout" class="callout_wrapper">
 			    <cover-view class="customCallout" marker-id="1">

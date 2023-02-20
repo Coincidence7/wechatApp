@@ -26,8 +26,6 @@ Page({
     },
     onReady: function (e) {
         this.mapCtx = wx.createMapContext('myMap')
-		
-		
     },
 	beforeenter: function(){
 		console.log("beforeenter")
@@ -75,19 +73,6 @@ Page({
 		this.setData({
 			env: wx.getAccountInfoSync().miniProgram.envVersion
 		})
-		
-		// if(this.data.env != 'develop'){
-		// 	for (var i = 0; i < this.data.markers.length; i++) {
-		// 		let s = 'markers[' + i + '].callout.display'
-		
-		// 		this.data.markers[i].callout.display = "BYCLICK"
-		// 		// this.setData({
-		// 		// 	["this.data.markers[" + i + "]"] : "BYCLICK"
-		// 		// })
-				
-		// 	}
-		// }
-		// console.log(this.data)
 	},
 	markertap: function(e){
 		console.log(e)
@@ -115,20 +100,6 @@ Page({
 				console.log(err)
 			}
 		})
-		
-		// wx.request({
-		// 	url: "https://apis.map.qq.com/ws/location/v1/ip",
-		// 	header:{  
-		// 		'content-type':'application/json'
-		// 	},
-		// 	method:'GET', 
-		// 	success(res){
-		// 		console.log(res);
-		// 	},
-		// 	fail(res){
-		// 		console.log(fail)
-		// 	}
-		// })
 	},
 	toDetail: function(){
 		this.setData({
@@ -138,6 +109,15 @@ Page({
 	closeDetail: function(){
 		this.setData({
 			showDetail: false
+		})
+	},
+	calloutTap: function(e){
+		console.log(e)
+		this.setData({
+			more: true
+		})
+		this.setData({
+			showDetail: true
 		})
 	}
 })

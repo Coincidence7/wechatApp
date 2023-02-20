@@ -9,18 +9,17 @@
 		refresher-triggered="{{ refresher_triggered }}"
 		>
 		<view style="height: 99%">
-				<van-cell-group >
-				  <van-cell 
-					title="任务" 
-					is-link 
-					value="清理xxx清运点的垃圾" 
-					link-type="navigateTo" 
-					url="/pages/taskDetail/taskDetail"
-					arrow-direction="{{ right }}"
-				   />
-				  <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
-				</van-cell-group>
-				
+			<van-cell-group>
+			  <van-cell 
+				title="任务" 
+				is-link 
+				value="清理xxx清运点的垃圾" 
+				link-type="navigateTo" 
+				url="/pages/taskDetail/taskDetail"
+				arrow-direction="{{ right }}"
+			   />
+			  <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+			</van-cell-group>
 		</view>
 	</scroll-view>
 </custom>
