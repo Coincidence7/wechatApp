@@ -44,6 +44,7 @@
 	"van-grid": "miniprogram_npm/@vant/weapp/grid/index",
 	"van-grid-item": "miniprogram_npm/@vant/weapp/grid-item/index",
 	"van-icon": "miniprogram_npm/@vant/weapp/icon/index",
+	"van-tag": "miniprogram_npm/@vant/weapp/tag/index",
 	"custom": "pages/container/container",
 	"state-card": "pages/stateCard/stateCard"
   },

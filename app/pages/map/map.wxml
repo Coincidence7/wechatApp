@@ -58,11 +58,18 @@
 			<cover-view slot="callout" class="callout_wrapper">
 			    <cover-view class="customCallout" marker-id="1">
 					<state-card defaultData="{{ true }}">
-						<span>
-							容量状态
-							所属机构
-							处理状态
-						</span>
+						<view style="display: flex; flex-direction: column;">
+							<span style="padding: 15rpx">
+								容量状态: <van-tag plain type="primary">100%</van-tag>
+							</span>
+							<span style="padding: 15rpx">
+								所属机构: <van-tag plain type="primary">xx机构</van-tag>
+							</span>
+							<span style="padding: 15rpx">
+								处理状态: <van-tag plain type="primary">无人处理</van-tag>
+							</span>
+						</view>
+						
 					</state-card>
 				</cover-view>
 			</cover-view>
