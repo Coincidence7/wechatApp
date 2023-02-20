@@ -17,10 +17,8 @@ Page({
 		}],
 		width: 0,
 		height: 0,
-		more: false,
 		activeKey: 0,
 		searchValue: "",
-		showDetail: false,
 		env: ""
 		
     },
@@ -101,23 +99,4 @@ Page({
 			}
 		})
 	},
-	toDetail: function(){
-		this.setData({
-			showDetail: true
-		})
-	},
-	closeDetail: function(){
-		this.setData({
-			showDetail: false
-		})
-	},
-	calloutTap: function(e){
-		console.log(e)
-		this.setData({
-			more: true
-		})
-		this.setData({
-			showDetail: true
-		})
-	}
 })

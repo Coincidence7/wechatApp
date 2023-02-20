@@ -6,7 +6,6 @@
 			scale='10'
 			markers="{{markers}}"
 			bindmarkertap="markertap"
-			bindcallouttap="calloutTap"
 		>
 		<cover-view slot="callout" class="callout_wrapper">
 		    <cover-view class="customCallout" marker-id="1">
@@ -27,16 +26,32 @@
 			</cover-view>
 		</cover-view>
 		</map>
-		<view> 
+
+		<view class="task_bottom"> 
+			<view class="title" style="text-align: center"><span>清理任务</span></view>
+			<van-divider />
+			<van-row style="text-align: center; margin: 10rpx">
+				<van-col span="8">站点状态</van-col>
+				<van-col span="8">任务状态</van-col>
+				<van-col span="8">操作</van-col>
+			</van-row>
+			<van-row style="text-align: center; margin: 10rpx">
+				<van-col span="8">100% -- 已满</van-col>
+				<van-col span="8">未接收任务</van-col>
+				<van-col span="8">
+					<van-button type="info" icon="guide-o" size="small">导航</van-button>
+				</van-col>
+			</van-row>
+			<view class="comment" style="text-align: center; margin: 10rpx">
+				没有任何批注
+			</view>
+			<view >
+				<view class="btn_wrapper">
+					<van-button type="info" icon="success">确认</van-button>
+					<van-button type="default" icon="cross">取消</van-button>
+				</view>
+			</view>
 			
 		</view>
-		<text>
-			这是你的任务
-			坐标
-			状态
-			所属机构
-			任务内容
-			批注
-		</text>
 	</view>		
 </custom>

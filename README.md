@@ -46,3 +46,4 @@
 #### 2023-02-20
     1. 完成 stateCard 基本设计
     2. stateCard callout 气泡点击事件
+    3. 完成 taskDetail 基本前端设计
