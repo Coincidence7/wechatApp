@@ -25,7 +25,7 @@
 
 	</view>
 	
-	<custom innerText="功能未开放,敬请期待" style="text-align: center; height: 60rpx; line-height: 60rpx;">
-	</custom>
+<!-- 	<custom innerText="功能未开放,敬请期待" style="text-align: center; height: 60rpx; line-height: 60rpx;">
+	</custom> -->
   
 </custom>

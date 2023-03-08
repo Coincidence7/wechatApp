@@ -10,7 +10,7 @@ public class WechatappApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(WechatappApplication.class, args);
-        //SocketTest.run();
+
     }
 
 }

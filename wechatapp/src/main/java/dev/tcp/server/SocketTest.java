@@ -23,27 +23,27 @@ public class SocketTest {
     }
 
     public static void run(){
-        try{
+//        try{
 //            testClient();
 
-            Socket socket = new Socket("", 11882);
-            if(socket.isConnected()){
-                System.out.println("连接中...");
-                OutputStream ops = socket.getOutputStream();
-                String content = toUnicode("微服务");
-
-                String msg = "test" + content;
-
-                ops.write(msg.getBytes());
-                ops.flush();
-                System.out.println();
-            }
-            testServer();
-        }catch (UnknownHostException unknownHostException){
-            unknownHostException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
+//            Socket socket = new Socket("", 11882);
+//            if(socket.isConnected()){
+//                System.out.println("连接中...");
+//                OutputStream ops = socket.getOutputStream();
+//                String content = toUnicode("微服务");
+//
+//                String msg = "test" + content;
+//
+//                ops.write(msg.getBytes());
+//                ops.flush();
+//                System.out.println();
+//            }
+//            testServer();
+//        }catch (UnknownHostException unknownHostException){
+//            unknownHostException.printStackTrace();
+//        } catch (IOException ioException) {
+//            ioException.printStackTrace();
+//        }
     }
     /**
      * 服务端

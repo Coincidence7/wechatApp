@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://49.233.5.44:1433;DataBase=CGQDataCenter
+    username: sa
+    password: BJUTbjut1234
+
+

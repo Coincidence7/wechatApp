@@ -1,4 +1,6 @@
 // logs.js
+
+
 const util = require('../../utils/util.js')
 
 let defaultAvatarUrl = wx.getStorageSync('avatarUrl');
