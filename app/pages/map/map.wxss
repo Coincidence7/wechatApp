@@ -9,6 +9,7 @@ page{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 }
 
 .myMap{
@@ -17,6 +18,7 @@ page{
 }
 .callout_wrapper{
 	height: 100%;
+
 }
 
 .area{

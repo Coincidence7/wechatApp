@@ -47,32 +47,32 @@
 				</view>
 			</custom>
 		</page-container>
+		
 		<map class="myMap"
 				longitude="116.33" 
 				latitude="39.93" 
 				scale='10'
 				markers="{{markers}}"
+				polyline="{{polyline}}"
 				bindmarkertap="markertap"
 				bindcallouttap="calloutTap"
 		  	>
 			<cover-view slot="callout" class="callout_wrapper">
-			    <cover-view class="customCallout" marker-id="1">
-					<state-card defaultData="{{ true }}">
-						<view style="display: flex; flex-direction: column;">
-							<span style="padding: 15rpx">
-								容量状态: <van-tag plain type="primary">100%</van-tag>
-							</span>
-							<span style="padding: 15rpx">
-								所属机构: <van-tag plain type="primary">xx机构</van-tag>
-							</span>
-							<span style="padding: 15rpx">
-								处理状态: <van-tag plain type="primary">无人处理</van-tag>
-							</span>
-						</view>
-						
-					</state-card>
+			    <cover-view class="customCallout" marker-id="{{0}}">
+						<cover-view style="display: flex; flex-direction: column; background-color: white; border: 10rpx solid #d4d4d499; padding: 20rpx;">
+							<cover-view style="padding: 15rpx; display: flex; flex-direction: row;">
+								容量状态: <cover-view plain type="primary" style="margin-left: 15rpx; border: 1px solid blue; margin-bottom: 20rpx">100%</cover-view>
+							</cover-view>
+							<cover-view style="padding: 15rpx; display: flex; flex-direction: row;">
+								所属机构: <cover-view plain type="primary" style="margin-left: 15rpx; border: 1px solid blue; margin-bottom: 20rpx">xx机构</cover-view>
+							</cover-view>
+							<cover-view style="padding: 15rpx; display: flex; flex-direction: row;">
+								处理状态: <cover-view plain type="primary" style="margin-left: 15rpx; border: 1px solid blue; margin-bottom: 20rpx">无人处理</cover-view>
+							</cover-view>
+						</cover-view>
 				</cover-view>
 			</cover-view>
+			
 			<van-icon bindtap="getMore" class="more" name="wap-nav" size="60rpx"/>
 			<van-icon bindtap="redirectLocation" class="location" name="location-o" size="60rpx"/>
 		</map>

@@ -24,3 +24,7 @@ page{
 .usermotto {
 /*  margin-top: 200px; */
 }
+
+.image_polling{
+	height: 300px;
+}

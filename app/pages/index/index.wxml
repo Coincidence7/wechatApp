@@ -1,44 +1,28 @@
 <!--index.wxml-->
 <view class="container">
 	<custom style="text-align: center;">
-		<view class="image_polling">
+		<view>
 			<swiper 
 				autoplay="{{ true }}" 
 				interval="2500"
-				indicator-dots="{{ true }}">
+				indicator-dots="{{ true }}"
+				class="image_polling">
 				<swiper-item>
-					<image class="stationImage" mode="widthFix" src="/static/default_data.png"></image>
+					<image class="stationImage" mode="widthFix" src="/static/hb1.jpg"></image>
 					
 				</swiper-item>
 				<swiper-item>
-					<image class="stationImage" mode="widthFix" src="/static/default_image.png"></image>
+					<image class="stationImage" mode="widthFix" src="/static/hb2.jpg"></image>
 					
 				</swiper-item>
 				<swiper-item>
-					<image class="stationImage" mode="widthFix" src="/static/dtu_sample_pic.jpg"></image>
+					<image class="stationImage" mode="widthFix" src="/static/hb3.jpg"></image>
 					
 				</swiper-item>
 			</swiper>
 		</view>
-		<view>
-			<view class="userinfo">
-				<block wx:if="{{canIUseOpenData}}">
-				  <view class="userinfo-avatar" bindtap="bindViewTap">
-					<open-data type="userAvatarUrl"></open-data>
-				  </view>
-				  <open-data type="userNickName"></open-data>
-				</block>
-				<block wx:elif="{{!hasUserInfo}}">
-				  <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-				  <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-				  <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-				</block>
-				<block wx:else>
-				  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-				  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-				</block>
-			</view>
-		</view>
+		<van-toast id="van-toast" />
+
 	</custom>
 </view>
 

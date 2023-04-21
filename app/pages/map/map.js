@@ -1,18 +1,19 @@
 import Notify from "@vant/weapp/notify/notify"
-var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
-var qqmapsdk;
-
+var AMapWX = require('../../utils/amap-wx.js');
+var amapsdk;
 Page({
 	data:{
 		markers: [{
-			id: 1,
+			id: 0,
 			longitude: "116.40",
 			latitude: "39.91",
 			iconPath: '/../static/location.png',
 			width: 50,
 			height: 50,
 			customCallout: {
-				display: "ALWAYS",
+				anchorY: 0,
+				anchorX:0,
+				display: 'BYCLICK',
 			},
 		}],
 		width: 0,
@@ -21,7 +22,8 @@ Page({
 		activeKey: 0,
 		searchValue: "",
 		showDetail: false,
-		env: ""
+		env: "",
+		polyline: []
 		
     },
     onReady: function (e) {
@@ -63,9 +65,23 @@ Page({
 		console.log("取消")
 	},
 	onLoad: function(options){
-		qqmapsdk = new QQMapWX({
-			key: 'IO7BZ-WRKL3-27633-3SRVO-VOKZE-I7F6G'
+		amapsdk = new AMapWX.AMapWX({
+			key: '5fb99ec993067ae930c04b06311f51dc'
 		})
+		amapsdk.getRegeo({
+		     success: function(data){
+		       //成功回调
+		       console.log('---------')
+				
+		       console.log(data)
+		     },
+		     fail: function(info){
+		       //失败回调
+		       console.log(info)
+		     }
+		   })
+		
+		
 		this.setData({
 			width: getApp().globalData.windowWidth,
 			height: getApp().globalData.windowHeight
@@ -75,7 +91,23 @@ Page({
 		})
 	},
 	markertap: function(e){
-		console.log(e)
+		// let arr = []
+		// for(let i = 0; i < this.data.markers.length; i++){
+		// 	arr.push(this.data.markers[i])
+		// 	if(i == e.detail.markerId){
+		// 		console.log(e.detail.markerId)
+		// 		arr[i].customCallout.display = "ALWAYS"
+		// 	}else {
+		// 		arr[i].customCallout.display = "BYCLICK"
+		// 	}
+			
+		// }
+		// this.setData({
+		// 	markers: arr
+		// })
+		this.setData({
+			env: "markertap"
+		})
 	},
 	startDrawer: function(e){
 		console.log(e)
@@ -92,14 +124,7 @@ Page({
 	},
 	redirectLocation: function(e){
 		// 引入SDK核心类
-		qqmapsdk.reverseGeocoder({
-			success: res =>{
-				console.log(res)
-			},
-			fail: err =>{
-				console.log(err)
-			}
-		})
+		 
 	},
 	toDetail: function(){
 		this.setData({
@@ -113,6 +138,10 @@ Page({
 	},
 	calloutTap: function(e){
 		console.log(e)
+		this.setData({
+			env: "calloutTap"
+		})
+		
 		this.setData({
 			more: true
 		})

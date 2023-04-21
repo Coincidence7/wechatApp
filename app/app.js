@@ -1,10 +1,12 @@
 // app.js
+
 App({
 	globalData: {
 		userInfo: null,
 		active: 0,
 		windowHeight: 0,
-		windowWidth: 0
+		windowWidth: 0,
+		hello: "hello"
 	},
 	onLaunch() {
 		let that = this
@@ -12,6 +14,7 @@ App({
 		const logs = wx.getStorageSync('logs') || []
 		logs.unshift(Date.now())
 		wx.setStorageSync('logs', logs)
+
 		
 		wx.getSystemInfo({
 		  success: function (res) {
